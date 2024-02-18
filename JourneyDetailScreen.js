@@ -35,8 +35,8 @@ const JourneyDetailScreen = ({ route, navigation }) => {
   // Function to render the seat layout
   const renderSeats = () => {
     const seatRows = [];
-    const totalSeats = 21;  // Total number of seats
-    const seatsPerRow = 3;  // Number of seats per row
+    const totalSeats = 70;  // Total number of seats
+    const seatsPerRow = 5;  // Number of seats per row
 
     for (let i = 0; i < totalSeats; i += seatsPerRow) {
       const rowSeats = [];

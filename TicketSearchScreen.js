@@ -19,7 +19,7 @@ const TicketSearchScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Ticket Search</Text>
+      <Text style={styles.title}>BUS Search</Text>
       <TextInput
         style={styles.input}
         placeholder="From"

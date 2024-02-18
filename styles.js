@@ -67,6 +67,9 @@ const styles = StyleSheet.create({
   selectedSeat: {
     backgroundColor: 'blue',
   },
+  reservedSeat: {
+    backgroundColor: 'red'
+  },
   paymentForm: {
     backgroundColor: 'white',
     padding: 20,

@@ -1,11 +1,11 @@
-import React from 'react';
-import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, TextInput, TouchableOpacity, RadioButtons } from 'react-native';
 import styles from './styles';
 import { useNavigation } from '@react-navigation/native';
 
 const PaymentScreen = () => {
-  // Correct usage of useNavigation hook
   const navigation = useNavigation();
+  const [paymentMethod, setPaymentMethod] = useState(null);
 
   const handlePayment = () => {
     // Payment processes will be handled here.
@@ -37,6 +37,24 @@ const PaymentScreen = () => {
             placeholder="Expiration Date"
           />
         </View>
+
+        {/* Section for selecting payment method */}
+        <View style={styles.paymentMethodSection}>
+          <Text>Select Payment Method:</Text>
+          <TouchableOpacity
+            style={[styles.paymentMethodButton, paymentMethod === 'MTN' && styles.selectedMethod]}
+            onPress={() => setPaymentMethod('MTN')}
+          >
+            <Text>MTN Mobile Money</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.paymentMethodButton, paymentMethod === 'Orange' && styles.selectedMethod]}
+            onPress={() => setPaymentMethod('Orange')}
+          >
+            <Text>Orange Money</Text>
+          </TouchableOpacity>
+        </View>
+
         <TouchableOpacity style={styles.payButton} onPress={handlePayment}>
           <Text style={styles.buttonText}>Pay</Text>
         </TouchableOpacity>

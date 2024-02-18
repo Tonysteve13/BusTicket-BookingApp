@@ -5,8 +5,8 @@ import styles from './styles';
 const JourneyListScreen = ({ navigation }) => {
   // Sample journey data
   const journeys = [
-    { id: '1', company: 'Company A', time: 'Time: 08:00', emptySeats: 10, price: '50 TRY' },
-    { id: '2', company: 'Company B', time: 'Time: 10:00', emptySeats: 5, price: '60 TRY' },
+    { id: '1', company: 'VATICAN', time: 'Time: 08:00 AM', emptySeats: 20, price: '6000 XAF' },
+    { id: '2', company: 'Amour Mezam', time: 'Time: 10:00 PM', emptySeats: 10, price: '7000 XAF' },
     // Other journeys
   ];
 
